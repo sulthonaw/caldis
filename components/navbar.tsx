@@ -7,7 +7,6 @@ import {
   NavigationMenuContent,
   NavigationMenuLink,
 } from "@/components/ui/navigation-menu";
-import { ChevronDown } from "lucide-react";
 
 export default function Navbar() {
   const menus = [
