@@ -39,7 +39,7 @@ export default function EarlySign() {
               Tanda-tanda Awal
             </h1>
 
-            <div className="border-t-theme-bg-300 absolute -bottom-3 left-1/2 h-0 w-0 -translate-x-1/2 border-t-[14px] border-r-[10px] border-l-[10px] border-r-transparent border-l-transparent"></div>
+            <div className="border-t-theme-bg-300 absolute -bottom-3 left-1/2 h-0 w-0 -translate-x-1/2 border-t-14 border-r-10 border-l-10 border-r-transparent border-l-transparent"></div>
           </div>
           <p className="text-theme-black-300 mt-2 text-lg font-medium">
             Deteksi dini sangat membantu perkembangan anak.

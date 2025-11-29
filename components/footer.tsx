@@ -78,16 +78,18 @@ export default function Footer() {
               Hubungi Kami
             </h3>
             <div className="flex gap-4">
+              {/* Instagram Button */}
               <Link
                 href="#"
-                className="text-theme-pink-300 flex h-12 w-12 items-center justify-center rounded-2xl bg-white shadow-sm transition-transform"
+                className="text-theme-pink-300 flex h-12 w-12 items-center justify-center rounded-2xl bg-white shadow-sm transition-transform hover:scale-105"
               >
                 <Instagram className="h-7 w-7" />
               </Link>
 
+              {/* Email Button */}
               <Link
                 href="#"
-                className="text-theme-pink-300 flex h-12 w-12 items-center justify-center rounded-2xl bg-white shadow-sm transition-transform"
+                className="text-theme-pink-300 flex h-12 w-12 items-center justify-center rounded-2xl bg-white shadow-sm transition-transform hover:scale-105"
               >
                 <Mail className="h-7 w-7" />
               </Link>
@@ -95,6 +97,7 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Bottom Section: Copyright */}
         <div className="border-t border-white/40 pt-8 text-center">
           <p className="text-sm font-medium text-white/90 md:text-base">
             © 2025 Caldis. Dibuat oleh Sulthon n Daffa

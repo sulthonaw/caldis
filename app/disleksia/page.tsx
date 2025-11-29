@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import EarlySign from "./_components/early-signs";
 import HeroDisleksia from "./_components/hero-disleksia";
 import HowWeHelp from "./_components/how-we-hep";
@@ -16,6 +17,7 @@ export default function page() {
       <TheStrengths />
       <EarlySign />
       <HowWeHelp />
+      <Footer />
     </>
   );
 }
