@@ -5,6 +5,16 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --color-theme-bg-300: #feeac7;
+  --color-theme-bg-100: #fff8ec;
+  --color-theme-purple-300: #9369f1;
+  --color-theme-purple-400: #592999;
+  --color-theme-pink-300: #fe93f1;
+  --color-theme-yellow-300: #ffd002;
+  --color-theme-green-300: #afee01;
+  --color-theme-green-400: #05bc61;
+  --color-theme-coral: #fb7768;
+  --color-theme-black-300: #39373a;
   --font-lexend: "Lexend", sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);

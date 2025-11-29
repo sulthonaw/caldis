@@ -25,12 +25,12 @@ export default function Navbar() {
     },
     {
       label: "Apa itu Disleksia?",
-      route: "",
+      route: "/disleksia",
     },
   ];
 
   return (
-    <header className="mx-auto mb-10 flex max-w-[660px] items-center justify-between rounded-2xl bg-purple-500 px-10 py-3 shadow shadow-white">
+    <header className="mx-auto mb-10 flex max-w-[660px] items-center justify-between rounded-2xl bg-purple-500 px-10 py-3 text-white shadow">
       <h1 className="text-lg font-semibold text-yellow-400">Caldis</h1>
       <NavigationMenu>
         <NavigationMenuList className="flex gap-10">
@@ -57,7 +57,7 @@ export default function Navbar() {
                 </>
               ) : (
                 <NavigationMenuLink asChild>
-                  <Link href={item.route} className="text-base">
+                  <Link href={item.route} className="">
                     {item.label}
                   </Link>
                 </NavigationMenuLink>

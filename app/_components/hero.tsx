@@ -1,5 +1,5 @@
-import Navbar from "../navbar";
-import { Button } from "../ui/button";
+import Navbar from "@/components/navbar";
+import { Button } from "@/components/ui/button";
 import { motion } from "motion/react";
 
 export default function Hero() {
