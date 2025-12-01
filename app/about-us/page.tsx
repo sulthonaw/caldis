@@ -5,11 +5,15 @@ import VisionAndMission from "./_components/vision-and-mission";
 import GetToKnowMaskots from "./_components/get-to-know-maskots";
 import OurTeam from "./_components/our-team";
 import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
 
 export default function page() {
   return (
     <>
-      <HeroAboutUs />
+      <div className="bg-theme-green-400">
+        <Navbar />
+        <HeroAboutUs />
+      </div>
       <Definition />
       <VisionAndMission />
       <RunningTextSection />

@@ -1,18 +1,9 @@
-import Navbar from "@/components/navbar";
 import { Button } from "@/components/ui/button";
 import { motion } from "motion/react";
 
 export default function Hero() {
   return (
     <section className="relative bg-violet-900 pt-10 text-center text-white">
-      <motion.div
-        initial={{ y: 40, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-      >
-        <Navbar />
-      </motion.div>
-
       <motion.div
         className="container mx-auto px-16"
         initial={{ y: 60, opacity: 0 }}

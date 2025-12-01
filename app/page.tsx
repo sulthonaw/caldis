@@ -6,11 +6,15 @@ import ChooseGame from "./_components/choose-game";
 import CTADisleksia from "./_components/cta-disleksia";
 import Hero from "./_components/hero";
 import WhyCaldis from "./_components/why-caldis";
+import Navbar from "@/components/navbar";
 
 export default function Home() {
   return (
     <>
-      <Hero />
+      <div className="bg-violet-900">
+        <Navbar />
+        <Hero />
+      </div>
       <WhyCaldis />
       <ChooseGame />
       <CTADisleksia />

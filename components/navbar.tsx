@@ -26,7 +26,7 @@ export default function Navbar() {
     },
     {
       label: "Tentang kami",
-      route: "/about",
+      route: "/about-us",
     },
     {
       label: "Apa itu Disleksia",

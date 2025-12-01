@@ -6,11 +6,15 @@ import MythVsFact from "./_components/myth-vs-fact";
 import RunningTextSection from "../../components/running-text-section";
 import TheStrengths from "./_components/the-strengths";
 import UnderstandingDisleksia from "./_components/understanding-disleksia";
+import Navbar from "@/components/navbar";
 
 export default function page() {
   return (
     <>
-      <HeroDisleksia />
+      <div className="bg-theme-coral">
+        <Navbar />
+        <HeroDisleksia />
+      </div>
       <UnderstandingDisleksia />
       <RunningTextSection />
       <MythVsFact />

@@ -1,5 +1,4 @@
 import LilisAndTutung from "@/components/lilis-and-tutung";
-import Image from "next/image";
 
 export default function UnderstandingDisleksia() {
   return (
