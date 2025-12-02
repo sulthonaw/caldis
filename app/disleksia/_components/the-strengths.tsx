@@ -29,7 +29,7 @@ export default function TheStrengths() {
       <div className="container mx-auto">
         <div className="mx-auto mb-12 max-w-5xl text-center">
           <h1 className="text-theme-yellow-300 mb-6 text-3xl font-bold md:text-4xl lg:text-5xl">
-            Kekuatan Tersembunyi (The Strengths)
+            Kekuatan Tersembunyi
           </h1>
           <p className="text-lg leading-relaxed font-medium text-white">
             Banyak tokoh dunia seperti Albert Einstein, Steve Jobs, dan Leonardo

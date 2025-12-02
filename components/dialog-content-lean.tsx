@@ -1,8 +1,21 @@
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+"use client";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import Image from "next/image";
+import { Button } from "./ui/button";
+import { cn } from "@/lib/utils";
+import { ReactNode } from "react";
 
-export default function ChooseGame() {
+export default function DialogContentLearn({
+  buttonTrigger,
+}: {
+  buttonTrigger: ReactNode;
+}) {
   const learningModules = [
     {
       image: "/icons/math.webp",
@@ -28,38 +41,16 @@ export default function ChooseGame() {
   ];
 
   return (
-    <section className="bg-theme-green-400 relative overflow-hidden">
-      <div className="container mx-auto flex h-full flex-col items-center justify-center gap-10 px-8 py-16 lg:flex-row lg:px-16 lg:py-24">
-        <div
-          className="relative z-10 aspect-square h-full w-[300px] shrink-0 select-none lg:w-[400px]"
-          draggable={false}
-        >
-          <Image
-            src={"/maskots/lilis.svg"}
-            width={400}
-            height={400}
-            alt=""
-            className="absolute top-0 h-auto w-[300px] -rotate-12"
-          />
-          <Image
-            src={"/maskots/caca.svg"}
-            width={400}
-            height={400}
-            alt=""
-            className="absolute top-40 right-0 h-auto w-[300px]"
-          />
-        </div>
-
-        <div className="flex w-full max-w-5xl flex-col gap-8">
-          <h2 className="text-theme-yellow-300 text-center text-3xl font-bold drop-shadow-sm lg:text-left lg:text-5xl">
-            Pilih Permainan Belajar
-          </h2>
-
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:gap-8">
+    <Dialog>
+      <DialogTrigger asChild>{buttonTrigger}</DialogTrigger>
+      <DialogContent className="max-w-4xl!">
+        <DialogHeader>
+          <DialogTitle>Permainan</DialogTitle>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             {learningModules.map((item, index) => (
               <article
                 key={index}
-                className="bg-theme-bg-100 flex flex-col items-center rounded-3xl p-6 text-center shadow-lg transition-transform duration-300"
+                className="bg-theme-bg-100 flex flex-col items-center rounded-3xl p-6 text-center shadow-sm transition-transform duration-300"
               >
                 <div className="mb-4">
                   <Image
@@ -90,8 +81,8 @@ export default function ChooseGame() {
               </article>
             ))}
           </div>
-        </div>
-      </div>
-    </section>
+        </DialogHeader>
+      </DialogContent>
+    </Dialog>
   );
 }

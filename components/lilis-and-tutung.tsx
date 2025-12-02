@@ -9,7 +9,7 @@ export default function LilisAndTutung() {
           alt="Background Gear"
           width={386}
           height={386}
-          className="h-auto w-full animate-spin opacity-80"
+          className="animate-spin-slow h-auto w-full opacity-80"
         />
       </div>
 

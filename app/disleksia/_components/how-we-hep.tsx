@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
+import DialogContentLearn from "@/components/dialog-content-lean";
 
 export default function HowWeHelp() {
   return (
@@ -50,10 +51,14 @@ export default function HowWeHelp() {
           </p>
 
           <div className="flex justify-center pt-4 lg:justify-start">
-            <Button className="bg-theme-pink-300 hover:bg-theme-pink-300/90 gap-3 rounded-full px-8! py-6 text-lg font-bold text-white shadow-lg">
-              Mulai Belajar
-              <Play className="h-5 w-5 fill-transparent stroke-white" />
-            </Button>
+            <DialogContentLearn
+              buttonTrigger={
+                <Button className="bg-theme-pink-300 hover:bg-theme-pink-300/90 gap-3 rounded-full px-8! py-6 text-lg font-bold text-white shadow-lg">
+                  Mulai Belajar
+                  <Play className="h-5 w-5 fill-transparent stroke-white" />
+                </Button>
+              }
+            />
           </div>
         </div>
       </div>

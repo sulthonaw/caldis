@@ -11,7 +11,7 @@ import Navbar from "@/components/navbar";
 export default function page() {
   return (
     <>
-      <div className="bg-theme-coral">
+      <div className="bg-theme-coral relative overflow-hidden">
         <Navbar />
         <HeroDisleksia />
       </div>

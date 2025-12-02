@@ -2,7 +2,7 @@ import React from "react";
 
 export default function HeroAboutUs() {
   return (
-    <section className="bg-theme-green-400 relative overflow-hidden">
+    <section className="bg-theme-green-400 relative overflow-hidden pb-24">
       <div className="absolute inset-0 bg-[url('/pattern-gears.png')] bg-cover bg-center opacity-30 mix-blend-overlay"></div>
 
       <div className="to-theme-yellow-300/30 absolute inset-0 bg-linear-to-b from-transparent"></div>

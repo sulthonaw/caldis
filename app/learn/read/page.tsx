@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, Settings } from "lucide-react"; // Pastikan install lucide-react
+import { ArrowLeft } from "lucide-react";
 
 export default function ReadingLevelPage() {
   const levels = [
@@ -8,26 +8,26 @@ export default function ReadingLevelPage() {
       title: "Mudah",
       description:
         "Belajar huruf dan suku kata lewat permainan ringan interaktif.",
-      image: "/maskots/caca.svg", // Asumsi file sama, bisa diganti jika ada ekspresi beda
-      colorClass: "text-theme-green-400", // Warna Judul
-      blobClass: "bg-theme-green-300/30", // Warna Blob Background Maskot
-      rotation: "-rotate-6", // Sedikit miring ke kiri
+      image: "/maskots/caca.svg",
+      colorClass: "text-theme-green-400",
+      blobClass: "bg-theme-green-300/30",
+      rotation: "-rotate-6",
     },
     {
       title: "Sedang",
       description:
         "Melatih membaca kata sederhana dengan bantuan visual yang mendukung fokus.",
       image: "/maskots/caca.svg",
-      colorClass: "text-orange-400", // Warna Oranye (Manual karena tidak ada di theme inline)
+      colorClass: "text-orange-400",
       blobClass: "bg-orange-300/30",
-      rotation: "rotate-6", // Sedikit miring ke kanan
+      rotation: "rotate-6",
     },
     {
       title: "Sulit",
       description:
         "Membaca kalimat pendek sambil memahami arti dengan tantangan ramah disleksia.",
       image: "/maskots/caca.svg",
-      colorClass: "text-theme-coral", // Warna Merah/Coral
+      colorClass: "text-theme-coral",
       blobClass: "bg-theme-coral/30",
       rotation: "-rotate-3",
     },
@@ -35,19 +35,10 @@ export default function ReadingLevelPage() {
 
   return (
     <section className="bg-theme-purple-300 font-lexend relative min-h-screen w-full overflow-hidden px-16 py-24">
-      {/* --- BACKGROUND DECORATION (Gear Icons) --- */}
-      {/* Elemen dekoratif gear samar di background */}
-      <div className="pointer-events-none absolute top-[-10%] left-[-5%] text-white/5">
-        <Settings className="animate-spin-slow h-96 w-96" />
-      </div>
-      <div className="pointer-events-none absolute right-[-5%] bottom-[-10%] text-white/5">
-        <Settings className="animate-reverse-spin h-[500px] w-[500px]" />
-      </div>
-
       <div className="relative z-10 container mx-auto">
         <header className="relative mb-12 flex items-center justify-between">
           <Link
-            href="/dashboard"
+            href="/"
             className="absolute top-1/2 left-0 flex -translate-y-1/2 items-center gap-2 text-lg font-medium text-white transition-opacity hover:opacity-80"
           >
             <ArrowLeft className="h-6 w-6" />
@@ -59,7 +50,7 @@ export default function ReadingLevelPage() {
           </h1>
         </header>
 
-        <div className="grid grid-cols-1 items-stretch gap-6 md:grid-cols-3 lg:gap-8">
+        <div className="mx-auto grid max-w-[977px] grid-cols-1 items-stretch gap-6 md:grid-cols-3 lg:gap-8">
           {levels.map((level, index) => (
             <div
               key={index}

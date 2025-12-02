@@ -11,7 +11,7 @@ import Navbar from "@/components/navbar";
 export default function Home() {
   return (
     <>
-      <div className="bg-violet-900">
+      <div className="bg-theme-purple-400 overflow-hidden">
         <Navbar />
         <Hero />
       </div>
