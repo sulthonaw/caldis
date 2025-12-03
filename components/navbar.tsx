@@ -24,9 +24,9 @@ export default function Navbar() {
       label: "Permainan",
       route: "#",
       children: [
-        { label: "Membaca", route: "/learn/read" },
-        { label: "Menulis", route: "/learn/write" },
-        { label: "Menghitung", route: "/learn/count" },
+        { label: "Membaca", route: "/games/read" },
+        { label: "Menulis", route: "/games/write" },
+        { label: "Menghitung", route: "/games/count" },
       ],
     },
     { label: "Tentang kami", route: "/about-us" },
