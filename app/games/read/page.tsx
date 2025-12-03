@@ -210,7 +210,7 @@ export default function ReadGamePage() {
     <div className="relative flex min-h-screen flex-col overflow-hidden bg-[#8b5cf6] font-sans">
       <header className="relative z-10 flex items-center justify-between p-4 text-white sm:p-6">
         <Link
-          href="/games"
+          href={"/"}
           className="flex items-center gap-2 rounded-xl px-3 py-2 transition-all hover:bg-white/10"
         >
           <ArrowLeft className="h-6 w-6" />

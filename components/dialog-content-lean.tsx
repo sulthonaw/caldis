@@ -10,6 +10,7 @@ import Image from "next/image";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import { ReactNode } from "react";
+import Link from "next/link";
 
 export default function DialogContentLearn({
   buttonTrigger,
@@ -18,6 +19,7 @@ export default function DialogContentLearn({
 }) {
   const learningModules = [
     {
+      link: "/games/count",
       image: "/icons/math.webp",
       title: "Berhitung Ceria",
       description:
@@ -25,6 +27,7 @@ export default function DialogContentLearn({
       buttonColor: "bg-theme-purple-300 hover:bg-theme-purple-400",
     },
     {
+      link: "/games/read",
       image: "/icons/read.webp",
       title: "Mari Membaca",
       description:
@@ -32,6 +35,7 @@ export default function DialogContentLearn({
       buttonColor: "bg-theme-green-400 hover:bg-theme-green-400/90",
     },
     {
+      link: "/games/write",
       image: "/icons/write.webp",
       title: "Ayo Menulis",
       description:
@@ -43,45 +47,52 @@ export default function DialogContentLearn({
   return (
     <Dialog>
       <DialogTrigger asChild>{buttonTrigger}</DialogTrigger>
-      <DialogContent className="max-w-4xl!">
+      <DialogContent className="max-w-full px-4 sm:max-w-xl sm:px-6 md:max-w-3xl lg:max-w-4xl">
         <DialogHeader>
-          <DialogTitle>Permainan</DialogTitle>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <DialogTitle className="text-lg sm:text-xl md:text-2xl">
+            Permainan
+          </DialogTitle>
+        </DialogHeader>
+
+        <div className="mt-4 max-h-[75vh] overflow-y-auto pb-6">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
             {learningModules.map((item, index) => (
               <article
                 key={index}
-                className="bg-theme-bg-100 flex flex-col items-center rounded-3xl p-6 text-center shadow-sm transition-transform duration-300"
+                className="bg-theme-bg-100 flex flex-col items-center rounded-3xl p-5 text-center shadow-sm transition-transform duration-300 sm:p-6"
               >
-                <div className="mb-4">
+                <div className="mb-4 flex justify-center">
                   <Image
                     src={item.image}
                     width={160}
                     height={160}
-                    className="h-32 w-32 object-contain"
+                    className="h-24 w-24 object-contain sm:h-28 sm:w-28 md:h-32 md:w-32"
                     alt={item.title}
                   />
                 </div>
 
-                <h3 className="text-theme-black-300 mb-2 text-xl font-bold">
+                <h3 className="text-theme-black-300 mb-2 text-lg font-bold sm:text-xl">
                   {item.title}
                 </h3>
 
-                <p className="text-theme-black-300 mb-6 grow text-sm leading-relaxed">
+                <p className="text-theme-black-300 mb-6 grow text-sm leading-relaxed sm:text-base">
                   {item.description}
                 </p>
 
-                <Button
-                  className={cn(
-                    item.buttonColor,
-                    `w-full rounded-full border-none py-6 font-bold text-white shadow-md`,
-                  )}
-                >
-                  Mainkan sekarang!
-                </Button>
+                <Link href={item.link}>
+                  <Button
+                    className={cn(
+                      item.buttonColor,
+                      `w-full rounded-full border-none py-4 text-sm font-bold text-white shadow-md sm:py-5 sm:text-base md:py-6`,
+                    )}
+                  >
+                    Mainkan sekarang!
+                  </Button>
+                </Link>
               </article>
             ))}
           </div>
-        </DialogHeader>
+        </div>
       </DialogContent>
     </Dialog>
   );
