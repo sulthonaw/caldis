@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import { Star, Volume2, VolumeX, RotateCcw, Trophy } from "lucide-react";
+import { Star, Volume2, VolumeX, RotateCcw, Trophy, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 interface GameState {
   num1: number;
@@ -381,8 +382,17 @@ export default function CountGamePage() {
         }
       `}</style>
 
-      <header className="mt-4 mb-6 flex w-full max-w-md items-center justify-between">
-        <div className="flex items-center gap-2 rounded-full border-2 border-red-400 bg-white px-4 py-2 shadow-md">
+      <header className="relative z-10 flex items-center w-full justify-between p-4 text-white sm:p-6">
+        <Link
+          href="/"
+          className="flex items-center gap-2 rounded-xl px-3 py-2 transition-all hover:bg-white/20"
+        >
+          <ArrowLeft className="h-6 w-6" />
+          <span className="hidden text-lg font-bold sm:inline">Kembali</span>
+        </Link>
+
+        <div className="flex gap-4">
+          <div className="flex items-center gap-2 rounded-full border-2 border-red-400 bg-white px-4 py-2 shadow-md">
           <Star className="h-6 w-6 fill-current text-yellow-400" />
           <span className="text-xl font-bold text-red-600">Skor: {score}</span>
         </div>
@@ -396,6 +406,7 @@ export default function CountGamePage() {
             <VolumeX className="h-6 w-6" />
           )}
         </button>
+        </div>
       </header>
 
       <main className="border-theme-yellow-300 relative z-10 mb-8 w-full max-w-md rounded-3xl border-r-8 border-b-8 bg-white p-6 shadow-xl">
