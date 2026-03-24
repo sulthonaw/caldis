@@ -6,6 +6,7 @@ import GetToKnowMaskots from "./_components/get-to-know-maskots";
 import OurTeam from "./_components/our-team";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
+import ContactUs from "./_components/contact-us";
 
 export default function page() {
   return (
@@ -19,6 +20,7 @@ export default function page() {
       <RunningTextSection />
       <GetToKnowMaskots />
       <OurTeam />
+      <ContactUs />
       <Footer />
     </>
   );
