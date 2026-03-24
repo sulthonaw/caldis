@@ -17,6 +17,7 @@
 - [Manfaat](#manfaat)
 - [Subtema](#subtema)
 - [Link Website](#link-website)
+- [Instalasi](#instalasi)
 - [Reference](#reference)
 
 ---
@@ -113,6 +114,61 @@ Dirancang khusus untuk anak PAUD–TK dengan pendekatan visual dan multisensori:
 🔗 https://caldis.vercel.app
 
 ---
+
+## Instalasi
+
+### Prasyarat
+
+Pastikan sudah menginstall:
+
+* **Node.js**
+* **npm** (biasanya sudah termasuk dalam Node.js)
+
+Cek versi dengan:
+
+```bash
+node -v
+npm -v
+```
+
+---
+
+## Langkah Instalasi
+
+1. **Clone repository**
+
+```bash
+git clone https://github.com/sulthonaw/caldis.git
+```
+
+2. **Masuk ke folder project**
+
+```bash
+cd caldis
+```
+
+3. **Install dependencies**
+
+```bash
+npm install
+```
+
+4. **Jalankan project**
+
+```bash
+npm run dev
+```
+
+---
+
+Project akan berjalan di:
+
+```
+http://localhost:3000
+```
+
+---
+
 
 ## Reference
 
