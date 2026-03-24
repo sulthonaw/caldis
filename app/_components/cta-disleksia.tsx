@@ -1,6 +1,7 @@
 import LilisAndTutung from "@/components/lilis-and-tutung";
 import { Button } from "@/components/ui/button";
 import { Eye, Ear } from "lucide-react";
+import Link from "next/link";
 
 export default function CTADisleksia() {
   return (
@@ -56,9 +57,11 @@ export default function CTADisleksia() {
 
           {/* Tombol CTA */}
           <div className="pt-2">
-            <Button className="bg-theme-coral hover:bg-theme-coral/90 shadow-theme-coral/20 rounded-full px-8 py-6 text-lg font-bold text-white shadow-lg transition-all">
-              Pelajari lebih lanjut
-            </Button>
+            <Link href={"/disleksia"}>
+              <Button className="bg-theme-coral hover:bg-theme-coral/90 shadow-theme-coral/20 rounded-full px-8 py-6 text-lg font-bold text-white shadow-lg transition-all">
+                Pelajari lebih lanjut
+              </Button>
+            </Link>
           </div>
         </div>
 
